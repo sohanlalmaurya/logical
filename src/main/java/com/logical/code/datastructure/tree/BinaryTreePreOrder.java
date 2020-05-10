@@ -24,6 +24,27 @@ public class BinaryTreePreOrder {
 			preorder(node.right);
 		}
 	}
+	
+	// Recursive traversal
+	public void inorder(Node node) {
+
+		if (node != null) {
+			inorder(node.left);
+			System.out.print(node.data + ", ");
+			inorder(node.right);
+		}
+	}
+	
+	// Recursive traversal
+	public void postorder(Node node) {
+
+		if (node != null) {
+			postorder(node.left);
+			postorder(node.right);
+			System.out.print(node.data + ", ");
+		}
+	}
+	
 
 	// Iterative call
 	public void preorderIter(Node node) {
@@ -73,9 +94,13 @@ public class BinaryTreePreOrder {
 	public static void main(String[] args) {
 		BinaryTreePreOrder tree = new BinaryTreePreOrder();
 		Node node = tree.createTree();
-		System.out.println("Recursive traversal");
+		System.out.println("Pre Order Recursive traversal");
 		tree.preorder(node);
-		System.out.println("\n\nIterative traversal");
+		System.out.println("\nPre Order Iterative traversal");
 		tree.preorderIter(node);
+		System.out.println("\n\nIn Order Recursive traversal");
+		tree.inorder(node);
+		System.out.println("\n\nPost Order Recursive traversal");
+		tree.postorder(node);
 	}
 }
