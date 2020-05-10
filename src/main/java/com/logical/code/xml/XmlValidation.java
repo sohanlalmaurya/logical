@@ -36,20 +36,19 @@ public class XmlValidation {
 			System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
 			NodeList nodeList = doc.getElementsByTagName("student");
 			for (int i = 0; i < nodeList.getLength(); i++) {
-				Node node = nodeList.item(i); 
-				if(node.getNodeType() == Node.ELEMENT_NODE) {
+				Node node = nodeList.item(i);
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
 					Element element = (Element) node;
-					
-					list.add(new Student(Integer.valueOf(element.getAttribute("rollno").toString()), 
-							element.getElementsByTagName("firstname").item(0).getTextContent(), 
-							element.getElementsByTagName("lastname").item(0).getTextContent(), 
-							element.getElementsByTagName("nickname").item(0).getTextContent(), 
+
+					list.add(new Student(Integer.valueOf(element.getAttribute("rollno").toString()),
+							element.getElementsByTagName("firstname").item(0).getTextContent(),
+							element.getElementsByTagName("lastname").item(0).getTextContent(),
+							element.getElementsByTagName("nickname").item(0).getTextContent(),
 							Integer.valueOf(element.getElementsByTagName("marks").item(0).getTextContent())));
 				}
 			}
 		} catch (Exception e) {
 		}
-
 		return list;
 	}
 
