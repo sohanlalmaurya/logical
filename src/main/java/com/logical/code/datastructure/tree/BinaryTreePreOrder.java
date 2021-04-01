@@ -96,7 +96,7 @@ public class BinaryTreePreOrder {
 		Node node = tree.createTree();
 		System.out.println("Pre Order Recursive traversal");
 		tree.preorder(node);
-		System.out.println("\nPre Order Iterative traversal");
+		System.out.println("\n\nPre Order Iterative traversal");
 		tree.preorderIter(node);
 		System.out.println("\n\nIn Order Recursive traversal");
 		tree.inorder(node);
