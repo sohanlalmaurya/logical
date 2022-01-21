@@ -1,6 +1,6 @@
 package com.logical.code.other;
 
-public class OtherTest {
+public class ReserveNumber {
 
 	public static void main(String[] args) {
 		int a=1895763;
