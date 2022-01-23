@@ -2,7 +2,7 @@ package com.logical.code.designpatterns.creational.singleton;
 
 public class SingletonLazy {
 
-	private static SingletonLazy instance = null;
+	private static SingletonLazy instance;
 
 	private SingletonLazy() {
 
@@ -10,11 +10,10 @@ public class SingletonLazy {
 
 	public static SingletonLazy getInstance() {
 
-		synchronized (SingletonLazy.class) {
-			if (instance == null) {
-				instance = new SingletonLazy();
-			}
+		if (instance == null) {
+			instance = new SingletonLazy();
 		}
+
 		return instance;
 	}
 }

@@ -2,16 +2,12 @@ package com.logical.code.designpatterns.creational.singleton;
 
 public class SingletonEager {
 	
-	private static SingletonEager instance = null;
-	
-	private SingletonEager() {
-		
-	}
-	
-	public static SingletonEager getInstance() {
-		if(instance == null) {
-			instance = new SingletonEager();
-		}
-		return instance;
-	}
+	 private static final SingletonEager instance = new SingletonEager();
+	    
+	    //private constructor to avoid client applications to use constructor
+	    private SingletonEager(){}
+
+	    public static SingletonEager getInstance(){
+	        return instance;
+	    }
 }
