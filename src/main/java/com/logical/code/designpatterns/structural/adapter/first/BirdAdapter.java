@@ -1,4 +1,4 @@
-package com.logical.code.designpatterns.structural.adapter;
+package com.logical.code.designpatterns.structural.adapter.first;
 
 public class BirdAdapter implements ToyDuck {
 
