@@ -1,10 +1,10 @@
-package com.logical.code.designpatterns.structural.decorator;
+package com.logical.code.designpatterns.structural.decorator.first;
 
-public class AlarmBikeDecorator extends BikeDecorator {
+public class ElectricBikeDecorator extends BikeDecorator {
 
 	protected Bike bike;
 
-	public AlarmBikeDecorator(Bike bike) {
+	public ElectricBikeDecorator(Bike bike) {
 		super(bike);
 		this.bike = bike;
 	}
@@ -17,12 +17,12 @@ public class AlarmBikeDecorator extends BikeDecorator {
 	@Override
 	protected int addFeaturePrice() {
 
-		return 10000;
+		return 11000;
 	}
 
 	@Override
 	protected String addFeatureName() {
 
-		return "Alarm";
+		return "Electric";
 	}
 }

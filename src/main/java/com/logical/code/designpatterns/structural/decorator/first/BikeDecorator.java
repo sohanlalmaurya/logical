@@ -1,4 +1,4 @@
-package com.logical.code.designpatterns.structural.decorator;
+package com.logical.code.designpatterns.structural.decorator.first;
 
 public abstract class BikeDecorator extends Bike {
 
