@@ -6,7 +6,7 @@ public class TemplatePatternDemo {
 		
 		Game cricket = new Cricket();
 		cricket.play();
-		
+		  
 		System.out.println();
 		
 		Game football = new Football();
